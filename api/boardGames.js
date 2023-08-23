@@ -11,6 +11,7 @@ const { getAllBoardGames,
 router.get('/', async (req, res, next) => {
     try {
         const boardGames = await getAllBoardGames();
+        console.log(boardGames)
         res.send(boardGames);
     } catch (error) {
         next(error);
